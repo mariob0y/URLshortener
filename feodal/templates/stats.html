@@ -1,0 +1,11 @@
+
+<h3> Stats of your short link  </h3>
+<a href="/list">Back</a>
+
+<div> _______________________________________</div>
+<div> |-- IP address -- | -- Date of visit -- | -- Referer -- |</div
+<div> ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯</div>
+{% for v in object_list %}
+<div> --{{v.ip}} --- {{v.date}} - {{v.referer}} </div>
+
+{% endfor %}

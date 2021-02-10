@@ -1,0 +1,11 @@
+
+<h3> List of your shortened links </h3>
+<a href="/create">Create short link</a>
+<div> </div>
+<div> _______________________________________________</div>
+<div> |-- Stats -- |------------ Short link ------------ | -- Full URL -- |</div
+<div> ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯</div>
+{% for l in object_list %}
+<div> --  <a href='http://127.0.0.1:8000/s/{{ l.short_url }}/stats'>Stats</a>-- -- <a href=http://127.0.0.1:8000/s/{{ l.short_url }}>http://127.0.0.1:8000/s/{{ l.short_url }}<a>  - {{ l.full_url }} </div>
+
+{% endfor %}

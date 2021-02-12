@@ -1,11 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Table V01</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href='{% static "images/icons/favicon.ico" %}'/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href=" {% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href=" {% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href=" {% static 'vendor/animate/animate.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href=" {% static 'vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href=" {% static 'vendor/perfect-scrollbar/perfect-scrollbar.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href=" {% static 'css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href=" {% static 'css/main.css' %}">
+<!--===============================================================================================-->
+</head>
+<header style='height: 30px;
+  background: #36304a;'>
+  ---<a href="/create" style='color: #fff;'>Create short link</a>
+  --- <a href="/list" style='color: #fff;'>List</a>
+      <a href="/./accounts/logout" style='color: red; float:right;'>Logout</a>
+</header>
+<body>
+	
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100">
+					<table>
+						<thead>
+							<tr class="table100-head">
+								<th class="column1">IP address</th>
+								<th class="column2">Date of visit</th>
+								<th class="column3">Referer</th>
+							</tr>
+						</thead>
+						<tbody>
+                                {% for v in object_list %}
+								<tr>
+									<td class="column1">
+									<a>{{v.ip}}</a>
+									</td>
+									<td class="column2">
+									<a>{{v.date}}</a>
+									</td>
+									<td class="column3">
+									<a>{{v.referer}}</a>
+									</td>
+								</tr>
+								{% endfor %}	
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
 
-<h3> Stats of your short link  </h3>
-<a href="/list">Back</a>
 
-<div> _______________________________________</div>
-<div> |-- IP address -- | -- Date of visit -- | -- Referer -- |</div
-<div> ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯</div>
-{% for v in object_list %}
-<div> --{{v.ip}} --- {{v.date}} - {{v.referer}} </div>
+	
 
-{% endfor %}
+<!--===============================================================================================-->	
+	<script src=" {% static 'vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src=" {% static 'vendor/bootstrap/js/popper.js' %}"></script>
+	<script src=" {% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src=" {% static 'vendor/select2/select2.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src=" {% static 'js/main.js' %}"></script>
+
+</body>
+</html>

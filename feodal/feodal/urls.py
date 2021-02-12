@@ -5,6 +5,8 @@ from django.contrib.auth.decorators import login_required
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('allauth.urls')),
+    path('', login_required(List.as_view())),
     path('s/', include('shortener.urls')),
     path('create/', login_required(UrlCreate.as_view())),
     path('list/', login_required(List.as_view())),

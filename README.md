@@ -1,6 +1,9 @@
 # URLshortener
 URL shortener. Test task for Feodal
 
+## Deployment link
+You may check app in action via this link - [uri.herokuapp.com/](https://uri.herokuapp.com/)
+
 ## Description
 URL shortening app, that lets you create short links. 
 User should be able to see:  
@@ -26,5 +29,5 @@ python manage.py runserver
 4. Open ```/create``` page and create your first short link!  
 
 ## Things to do
-* UI  
-* Deploy  
+* UI - fancy templates for login pages   
+* Social account login support  

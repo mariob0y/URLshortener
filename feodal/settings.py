@@ -26,8 +26,7 @@ SECRET_KEY = 'hz=2$#sho3r1cm2gj(dopm5o4@7v417gy%h%ne+ilb!2cvu=!x'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['.herokuapp.com']
 
 # Application definition
 
@@ -139,3 +138,6 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 SITE_ID = 1
+
+import django_heroku
+django_heroku.settings(locals())

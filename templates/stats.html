@@ -43,7 +43,9 @@
 							</tr>
 						</thead>
 						<tbody>
+						        {% if object_list %}
                                 {% for v in object_list %}
+								
 								<tr>
 									<td class="column1">
 									<a>{{v.ip}}</a>
@@ -55,7 +57,15 @@
 									<a>{{v.referer}}</a>
 									</td>
 								</tr>
-								{% endfor %}	
+								{% endfor %}
+								{% else %}
+    							<tr>
+									<td class="column1">
+									<a> No visits yet</a>
+									</td>
+
+								</tr>
+								{% endif %}	
 						</tbody>
 					</table>
 				</div>

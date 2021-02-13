@@ -43,6 +43,7 @@
 							</tr>
 						</thead>
 						<tbody>
+				        {% if object_list %}
 						{% for l in object_list %}
 								<tr>
 									<td class="column1">
@@ -55,7 +56,15 @@
 									{{ l.full_url }}
 									</td>
 								</tr>
-								{% endfor %}	
+								{% endfor %}
+																{% else %}
+    							<tr>
+									<td class="column1">
+									<a> No short links created yet</a>
+									</td>
+
+								</tr>
+								{% endif %}		
 						</tbody>
 					</table>
 				</div>

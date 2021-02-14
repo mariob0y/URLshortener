@@ -1,12 +1,39 @@
 
-    
+
+  
+
+{% load static %}
+
+
+{% load i18n %}
+{% load account socialaccount %}
+
+
+
+{% block content %}
+
+
+
+{% get_providers as socialaccount_providers %}
+
+{% if socialaccount_providers %}
+
+
+
+
+
+{% include "socialaccount/snippets/login_extra.html" %}
+
+
+{% endif %}
+
 
 
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>URL Shortener - Create new link</title>
+	<title>URL Shortener - List</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -36,24 +63,42 @@
 	
 	<div class="limiter">
 		<div class="container-table100">
-			<div class="wrap-table100">
-				<div class="table100">
+			
 					<table>
-						<thead>
-							<tr class="table100-head">
-								
-											<form method="post"> 
-   											 {% csrf_token %} 
-								<th class="column2" ><center>Full URL: {{ form.full_url}}  </center></th>
+						
+					<div class="card ">
+          <div> &nbsp; </div>
+          <p><center style=' padding: 12px 20px; '>{% trans 'Are you sure you want to sign out?' %}</p>
+<form method="post" action="{% url 'account_logout' %}">
+  {% csrf_token %}
+  {% if redirect_field_value %}
+  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+  {% endif %}
+  <div> &nbsp; </div>
+  <div><button class="primaryAction" type="submit" style="background-color: #36304a;
+   														  color: #fff;; 
+														  border-radius: 15px;
+														  padding: 5px 25px;">{% trans "Log out" %}</button></div></center>
+
+  
+</form></center>
+<div> &nbsp; </div>
+</div>
+
+
 							</tr>
 						</thead>
 						<tbody>
+
+
+{% endblock %} </td>
+								</tr>
+							
+																
+    							
+
+								</tr>
 								
-									<td class="column2">
-									<center><button  type="submit">Create link</button></center>
-									</td>
-								</form> 
-								</tr>	
 						</tbody>
 					</table>
 				</div>

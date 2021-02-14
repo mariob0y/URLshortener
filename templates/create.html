@@ -36,22 +36,27 @@
 	
 	<div class="limiter">
 		<div class="container-table100">
-			<div class="wrap-table100">
-				<div class="table100">
-					<table>
-						<thead>
-							<tr class="table100-head">
+			
+					<div class="card ">
 								
 											<form method="post"> 
    											 {% csrf_token %} 
-								<th class="column2" ><center>Full URL: {{ form.full_url}}  </center></th>
-							</tr>
-						</thead>
+												<div> 	&nbsp;</div>
+								
+							
+							<center><div> 	Full URL: </div></center>
+							<div style=' padding: 12px 20px; '> <input style=" background-color: #F0F8FF; height: 35px; border-radius: 10px;" id="full_url" type="text" name="full_url" >
+						<div> 	&nbsp;</div></thead>
 						<tbody>
 								
 									<td class="column2">
-									<center><button  type="submit">Create link</button></center>
-									</td>
+									
+									<center><button  type="submit" style="background-color: #36304a;
+   														  color: #fff;; 
+														  border-radius: 15px;
+														  padding: 5px 25px;">Create link</button></center>
+									
+									<div> 	&nbsp;</div></td>
 								</form> 
 								</tr>	
 						</tbody>

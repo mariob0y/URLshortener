@@ -68,10 +68,10 @@
           <div> &nbsp; </div>
 <center><form class="login" method="POST" action="{% url 'account_login' %}">
   {% csrf_token %}
-    <div>&nbsp;Username</div>
-  <div style=' padding: 12px 20px; '>{{ form.login }}</div>
+   <div style=' padding: 12px 20px; '> <div>&nbsp;Username</div>
+  <input style=" background-color: #F0F8FF; height: 35px; border-radius: 10px;" id="login" type="text" name="login" >
   <div>Password</div>
-  <div>{{ form.password }}</div>
+  <div class="fieldWrapper" style=" background-color: #F0F8FF; height: 35px; border-radius: 10px;">{{ form.password }}</div>
   <div> 	&nbsp;</div>
   {% if redirect_field_value %}
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />

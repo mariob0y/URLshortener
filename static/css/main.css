@@ -255,22 +255,22 @@ tbody tr:hover {
     top: 0;
   }
   table tbody tr td:nth-child(1):before {
-    content: "Date";
+    content: "Actions";
   }
   table tbody tr td:nth-child(2):before {
-    content: "Order ID";
+    content: "Short URL";
   }
   table tbody tr td:nth-child(3):before {
-    content: "Name";
+    content: "Full URL";
   }
   table tbody tr td:nth-child(4):before {
-    content: "Price";
+    content: "IP Address";
   }
   table tbody tr td:nth-child(5):before {
-    content: "Quantity";
+    content: "Date of visit";
   }
   table tbody tr td:nth-child(6):before {
-    content: "Total";
+    content: "Referer";
   }
 
   .column4,

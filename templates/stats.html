@@ -37,9 +37,13 @@
 					<table>
 						<thead>
 							<tr class="table100-head">
+							<th class="column4" style='display: none'>IP address</th>
+								<th class="column5" style='display: none'>Date of visit</th>
+								<th class="column6" style='display: none'>Referer</th>
 								<th class="column1">IP address</th>
 								<th class="column2">Date of visit</th>
 								<th class="column3">Referer</th>
+								
 							</tr>
 						</thead>
 						<tbody>
@@ -47,6 +51,17 @@
                                 {% for v in object_list %}
 								
 								<tr>
+								<td class="column4" style='display: none'>
+									<a>.</a>
+									</td>
+									<td class="column4" style='display: none'>
+									<a>.</a>
+									</td>
+									<td class="column4" style='display: none'>
+									<a>.</a>
+									</td>
+									
+
 									<td class="column1">
 									<a>{{v.ip}}</a>
 									</td>

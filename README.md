@@ -29,5 +29,4 @@ python manage.py runserver
 4. Open ```/create``` page and create your first short link!  
 
 ## Things to do
-* UI - fancy templates for login pages   
 * Social account login support  

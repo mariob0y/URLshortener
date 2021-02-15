@@ -1,8 +1,9 @@
 # URLshortener
-URL shortener. Test task for Feodal
+URL shortener  - Django app  
 
 ## Deployment link
-You may check app in action via this link - [uri.herokuapp.com/](https://uri.herokuapp.com/)
+You may check app in action via this link - [uri.herokuapp.com/](https://uri.herokuapp.com/)  
+Test credentials: test, test   
 
 ## Description
 URL shortening app, that lets you create short links. 

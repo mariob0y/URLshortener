@@ -33,4 +33,4 @@ python manage.py runserver
 * Social account login support  
 * Delete link function   
 * Pagination for links/visits   
-* Endless skroll for pagination   
+* Endless scroll for pagination   

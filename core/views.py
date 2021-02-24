@@ -27,7 +27,7 @@ class List(View):
     def get(self, request):
         '''Getting UrlMap objects for page'''
         user = self.request.user
-        queryset = UrlMap.objects.filter(user=user)
+        queryset = UrlMap.objects.filter(user=user).order_by('-date_created')
         context = {"object_list": queryset}
         return render(request, 'list.html', context)
 
